@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+}
+.App {
+  background-image: url(https://images.wallpaperscraft.com/image/blue_background_color_153514_3840x2160.jpg);
+  background-repeat: "no-repeat";
+  width: 100vh auto;
+  height: 100vh ;
+  margin-left: auto;
+  margin-right: auto;
+}

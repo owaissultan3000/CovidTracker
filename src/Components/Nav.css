@@ -1,0 +1,15 @@
+.nav {
+  /* margin: 100px; */
+  text-align: center;
+
+}
+.nav span {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.clogo {
+  height: 70px;
+  width: 70px;
+  margin-top: 2%;
+}
