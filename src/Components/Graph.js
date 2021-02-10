@@ -24,7 +24,8 @@ const data = {
 };
 
 var options = {
-   responsive: true,
+  responsive: true,
+  
    maintainAspectRatio: false,
    legend: {
       fontColor: "white",
@@ -75,7 +76,7 @@ export default function Graph({name}) {
   data.datasets[0].data = values
   // console.log(name)
     return (
-        <div style={{marginTop:"5%", marginLeft:"-25%", width:"800px", height: "300px"}}>
+        <div style={{marginTop:"2%", marginLeft:"25%", width:"50%", height: "300px"}}>
             <h2 style={{color: '#f5f5f5',fontWeight: 'bold'}}>COVID-19 BAR GRAPH</h2>
             <Bar
                 data={data}

@@ -5,11 +5,30 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { CountriesContext } from "./CountriesContext"
 import Graph from "./Graph"
 import Card from './Card'
-import "./CountriesList.css"
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  inputRoot: {
+    color: "purple",
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "green"
+    },
+    "&:hover .MuiOutlinedInput-notchedOutline": {
+      borderColor: "red"
+    },
+    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "purple"
+    }
+  }
+}));
+
+
+
 
 export default function ComboBox() {
   const [countries, setCountries] = useContext(CountriesContext)
   const [name, setName] = useState("")
+  const classes = useStyles();
 
   var countrylist = []
     
@@ -28,20 +47,22 @@ export default function ComboBox() {
   if (name === null || name === undefined || name === "") {
 
       setName("Global")
-    }
+  }
+  
+ //style={{marginLeft:"40%",marginTop:"1.5%" }} 
     return (
-      <div className="countriesList" style={{ alignItems: "center" }}>
+      <div >
         
         {name && <Card name={name} />}
 
 
         <Autocomplete
-          style={{paddingTop:"4%"}}
         onChange={(event,title) => counteryNameSatter(title) }
         id="combo-box-demo"
+        classes={classes}
         options={countrylist}
         getOptionLabel={(option) => option}
-        style={{ width: 405}}
+        style={{ width: "30%",marginLeft:"35%",marginTop:"1%"}}
         renderInput={(params) => <TextField {...params}   variant="outlined" style={{backgroundColor:"white",textColor:"white"}} />}
         />
 

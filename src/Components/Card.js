@@ -8,21 +8,24 @@ import { CountriesContext} from "./CountriesContext"
 
 const useStyles = makeStyles({
   root: {
-        minWidth: 250,
-        maxWidth: 250,
-        margin: 20,
+        height:"-1%",
+        minWidth: "10%",
+        maxWidth: "40%",
+        margin: "1.5%",
+        paddingLeft: "-9%"
+        
         
   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
-    transform: 'scale(0.8)',
+    transform: 'scale(0.2)',
   },
   title: {
-    fontSize: 14,
+    fontSize: "70%",
   },
   pos: {
-      marginBottom: 12,
+    marginBottom: "2%"
       
   },
 });
@@ -54,7 +57,7 @@ export default function SimpleCard({name}) {
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-      <div style={{display:"flex",flexDirection:"row",marginTop: "-3%",justifyContent:"center",marginLeft: "20%",width:"2%"}}>
+      <div style={{display:"flex",flexDirection:"row",marginTop: "0.7%",marginLeft: "1%",justifyContent:"center"}}>
     <Card className={classes.root}>
       <CardContent style={{backgroundColor: "#ADDFFF"}}>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
