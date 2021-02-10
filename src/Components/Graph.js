@@ -77,11 +77,11 @@ export default function Graph({name}) {
   // console.log(name)
     return (
         <div style={{marginTop:"2%", marginLeft:"25%", width:"50%", height: "300px"}}>
-            <h2 style={{color: '#f5f5f5',fontWeight: 'bold'}}>COVID-19 BAR GRAPH</h2>
+            <h3 style={{color: '#f5f5f5',fontWeight: 'bold'}}>COVID-19 BAR GRAPH</h3>
             <Bar
                 data={data}
                 width={50}
-                height={250}
+                height={100}
                 options={options}
             />
         </div>

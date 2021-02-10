@@ -25,7 +25,9 @@ const useStyles = makeStyles({
     fontSize: "70%",
   },
   pos: {
-    marginBottom: "2%"
+    marginBottom: "2%",
+    marginLeft: "-7%",
+    marginTop: "-2%"
       
   },
 });
@@ -61,15 +63,15 @@ export default function SimpleCard({name}) {
     <Card className={classes.root}>
       <CardContent style={{backgroundColor: "#ADDFFF"}}>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  <span style={{ color: "#696969",fontWeight:"bold" }} >INFECTED ({name})</span>
+                  <span className={classes.pos} style={{ color: "#696969",fontWeight:"bold" }} >INFECTED ({name})</span>
         </Typography>
-        <Typography variant="h6" component="h3">
+        <Typography className={classes.pos} variant="h6" component="h2">
           {infact}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           {time}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography className={classes.pos} variant="body2" component="p">
           Number Of Active Cases Of
           <br />
           <span style={{color:"#FF0000",fontWeight:"bold"}}>COVID-19</span>
@@ -82,15 +84,15 @@ export default function SimpleCard({name}) {
                 <Card className={classes.root}>
       <CardContent style={{backgroundColor:"#6AFB92"}}>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  <span style={{ color: "#696969",fontWeight:"bold" }} >RECOVERED ({name})</span>
+                  <span className={classes.pos} style={{ color: "#696969",fontWeight:"bold" }} >RECOVERED ({name})</span>
         </Typography>
-        <Typography variant="h5" component="h2">
+        <Typography className={classes.pos} variant="h6" component="h2">
           {recover}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           {time}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography className={classes.pos} variant="body2" component="p">
           Number Of Recoveries From
           <br />
           <span style={{color:"#FF0000",fontWeight:"bold"}}>COVID-19</span>
@@ -103,15 +105,15 @@ export default function SimpleCard({name}) {
                 <Card className={classes.root}>
       <CardContent style={{backgroundColor:"#FC6C85"}}>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  <span style={{ color: "#696969",fontWeight:"bold" }} >DEATHS ({name})</span>
+                  <span className={classes.pos} style={{ color: "#696969",fontWeight:"bold" }} >DEATHS ({name})</span>
         </Typography>
-        <Typography variant="h5" component="h2">
+        <Typography className={classes.pos} variant="h6" component="h2">
           {deaths}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           {time}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography className={classes.pos} variant="body2" component="p">
           Number Of Deaths Caused By
           <br />
           <span style={{color:"#FF0000",fontWeight:"bold"}}>COVID-19</span>
