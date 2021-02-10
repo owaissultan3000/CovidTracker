@@ -75,7 +75,7 @@ export default function Graph({name}) {
   data.datasets[0].data = values
   // console.log(name)
     return (
-        <div style={{marginTop:"5%", marginLeft:"-25%", width:"1000px", height: "400px"}}>
+        <div style={{marginTop:"5%", marginLeft:"-25%", width:"800px", height: "300px"}}>
             <h2 style={{color: '#f5f5f5',fontWeight: 'bold'}}>COVID-19 BAR GRAPH</h2>
             <Bar
                 data={data}

@@ -30,12 +30,9 @@ const useStyles = makeStyles({
 export default function SimpleCard({name}) {
 
     const [countries, setCountries] = useContext(CountriesContext)
-    // var tempDate = new Date();
-    // var date = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
-    // const currDate =  date;
   
   
-  console.log(countries['Global'])
+  // console.log(countries['Global'])
   if (countries[name]!== undefined && name === 'Global') {
 
   var infact = countries[name].Global.infact
@@ -57,13 +54,13 @@ export default function SimpleCard({name}) {
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-      <div className="card" style={{display:"flex",flexDirection:"row",marginTop: "-1%",justifyContent:"center",marginLeft: "-73%"}}>
+      <div style={{display:"flex",flexDirection:"row",marginTop: "-3%",justifyContent:"center",marginLeft: "20%",width:"2%"}}>
     <Card className={classes.root}>
       <CardContent style={{backgroundColor: "#ADDFFF"}}>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
                   <span style={{ color: "#696969",fontWeight:"bold" }} >INFECTED ({name})</span>
         </Typography>
-        <Typography variant="h5" component="h2">
+        <Typography variant="h6" component="h3">
           {infact}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
